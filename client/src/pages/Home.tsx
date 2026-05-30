@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Search, ChevronRight } from "lucide-react";
 import FeaturedHomily from "@/components/FeaturedHomily";
+import Footer from "@/components/Footer";
 import { homilies, formatDate, getSeasonColor, seasons } from "@/data/homilies";
 import { useLocation } from "wouter";
 
@@ -64,9 +65,9 @@ export default function Home() {
       <section 
         className="relative h-96 md:h-[500px] bg-cover bg-center flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `url('https://d2xsxph8kpxj0f.cloudfront.net/310519663437864312/ZoTNva3uTTAWa25qejkb8b/hero-background-ScKn9L65LX8vRZJk4uPRo7.webp')`,
+          backgroundImage: `url('/hero.png')`,
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "center 65%"
         }}
       >
         {/* Dark overlay for text readability */}
@@ -212,49 +213,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground">
-        <div className="container py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h4 className="font-bold text-lg mb-3">About</h4>
-              <p className="text-sm opacity-90">
-                A collection of Sunday homilies and biblical readings to support your spiritual journey.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-3">Resources</h4>
-              <ul className="text-sm space-y-2 opacity-90">
-                <li>
-                  <button onClick={() => setLocation('/archive')} className="hover:underline text-left">
-                    • Homily Archive
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => setLocation('/contemplative-prayer')} className="hover:underline text-left">
-                    • Contemplative Prayer
-                  </button>
-                </li>
-                <li>• Liturgical Calendar</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-3">Support</h4>
-              <ul className="text-sm space-y-2 opacity-90">
-                <li>
-                  <a href="https://wl.donorperfect.net/weblink/weblink.aspx?name=E3014&id=1" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    • Donate to Catholic Charities
-                  </a>
-                </li>
-                <li>• Contact Us</li>
-                <li>• Prayer Requests</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-75">
-            <p>&copy; 2025 Fr. Joe Staudt. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

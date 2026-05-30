@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { ArrowLeft, Play } from "lucide-react";
+import Footer from "@/components/Footer";
 
 /**
  * Design System: Liturgical Minimalism
@@ -274,47 +275,7 @@ export default function ContemplativePrayer() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground mt-16">
-        <div className="container py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h4 className="font-bold text-lg mb-3">About</h4>
-              <p className="text-sm opacity-90">
-                A collection of Sunday homilies and resources for contemplative prayer and spiritual growth.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-3">Resources</h4>
-              <ul className="text-sm space-y-2 opacity-90">
-                <li>
-                  <button onClick={() => setLocation('/')} className="hover:underline text-left">
-                    • Sunday Homilies
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => setLocation('/archive')} className="hover:underline text-left">
-                    • Homily Archive
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-3">Support</h4>
-              <ul className="text-sm space-y-2 opacity-90">
-                <li>
-                  <a href="https://wl.donorperfect.net/weblink/weblink.aspx?name=E3014&id=1" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    • Donate to Catholic Charities
-                  </a>
-                </li>
-                <li>• Contact Us</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-75">
-            <p>&copy; 2025 Fr. Joe Staudt. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import AudioPlayer from "@/components/AudioPlayer";
 import { homilies, formatDate, getSeasonColor } from "@/data/homilies";
+import Footer from "@/components/Footer";
 
 /**
  * Design System: Liturgical Minimalism
@@ -128,19 +129,6 @@ export default function HomilySingle() {
             </div>
           )}
 
-          {/* Reflection Section */}
-          <div className="bg-secondary/30 p-8 rounded-lg mb-12">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Reflection</h2>
-            <p className="text-foreground leading-relaxed mb-4">
-              This homily explores the themes and messages of the Sunday readings within the context of the liturgical year. 
-              The readings invite us to deeper reflection on our faith and how we live out the Gospel in our daily lives.
-            </p>
-            <p className="text-foreground leading-relaxed">
-              As we journey through the Church's calendar, each season—whether Advent, Christmas, Lent, Easter, or Ordinary Time—
-              offers unique spiritual insights and calls us to transformation through Christ's grace.
-            </p>
-          </div>
-
           {/* Navigation Buttons */}
           <div className="flex gap-4 justify-between">
             <Button
@@ -162,37 +150,7 @@ export default function HomilySingle() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground mt-16">
-        <div className="container py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h4 className="font-bold text-lg mb-3">About</h4>
-              <p className="text-sm opacity-90">
-                A collection of Sunday homilies and biblical readings to support your spiritual journey.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-3">Liturgical Year</h4>
-              <ul className="text-sm space-y-2 opacity-90">
-                <li>• Advent</li>
-                <li>• Christmas</li>
-                <li>• Lent</li>
-                <li>• Easter</li>
-                <li>• Ordinary Time</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-3">Contact</h4>
-              <p className="text-sm opacity-90">
-                For more information about Fr. Joe Staudt's ministry, please visit your local parish.
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-75">
-            <p>&copy; 2025 Fr. Joe Staudt. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
