@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
-      <div className="container py-4 flex items-center justify-between">
+      <div className="container h-16 flex items-center justify-between">
         {/* Logo/Home Link */}
         <button
           onClick={() => setLocation("/")}
